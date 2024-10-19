@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- DaisyUI CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar bg-base-100 shadow-lg">
+    <div class="navbar-start">
+      <!-- Mobile menu button (hamburger icon) -->
+      <div class="dropdown">
+        <label tabindex="0" class="btn btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </label>
+        <!-- Dropdown menu for mobile view -->
+        <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Brand logo -->
+      <a class="btn btn-ghost normal-case text-xl" href="#">Brand</a>
+    </div>
+
+    <!-- Navbar center for larger screens -->
+    <div class="navbar-center hidden lg:flex">
+      <ul class="menu menu-horizontal px-1">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Navbar end (optional buttons or icons) -->
+    <div class="navbar-end">
+      <a class="btn" href="#">Login</a>
+    </div>
+  </nav>
+
+  <!-- Tailwind and DaisyUI Scripts -->
+  <script>
+    // Initialize Tailwind
+    tailwind.config = {
+      theme: {
+        extend: {},
+      },
+      plugins: [
+        require('daisyui'),
+      ],
+    }
+  </script>
+
+</body>
+</html>
